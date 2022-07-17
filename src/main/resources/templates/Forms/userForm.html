@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org/">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<div  th:fragment="userForm(formAction)">
+		<form th:action="${formAction}" method="post">
+
+			<!-- name and email fields -->
+			<div class="row row-cols-lg-auto g-1">
+				<div class="col-md-6 mt-2">
+					<div class="input-group flex-nowrap">
+
+						<span class="input-group-text" id="addon-wrapping">Name</span> <input
+							type="text" name="name" class="form-control" placeholder="name"
+							aria-label="name" aria-describedby="addon-wrapping">
+					</div>
+				</div>
+				<div class="col-md-6 mt-2">
+					<div class="input-group flex-nowrap">
+						<span class="input-group-text" id="addon-wrapping">Email</span> <input
+							type="email" name="email" class="form-control"
+							placeholder="Example@gmail.com" aria-label="Email"
+							aria-describedby="addon-wrapping">
+					</div>
+				</div>
+
+			</div>
+			<!--  contact and gender  -->
+			<div class="row row-cols-lg-auto g-1 mt-2">
+				<div class="col-md-3 mt-2">
+					<div class="input-group flex-nowrap">
+
+						<span class="input-group-text" id="addon-wrapping">Gender</span> <select
+							class="form-select" name="gender"
+							aria-label="Default select example">
+							<option selected>Open this select menu</option>
+							<option value="1">Male</option>
+							<option value="2">Female</option>
+
+						</select>
+					</div>
+				</div>
+				<div class="col-md-9 mt-2">
+					<div class="input-group flex-nowrap">
+						<span class="input-group-text" id="addon-wrapping">Contact</span>
+						<input type="number" name="contact" class="form-control"
+							placeholder="Phone no." aria-label="phone No."
+							aria-describedby="addon-wrapping">
+					</div>
+				</div>
+
+
+			</div>
+
+			<!--  birth and role  -->
+			<div class="row row-cols-lg-auto g-1 mt-2">
+				<div class="col-md-6 mt-2">
+					<div class="input-group flex-nowrap">
+						<span class="input-group-text" id="addon-wrapping">Birth</span> <input
+							type="date" name="dob" class="form-control"
+							placeholder="date of birth" aria-label="birth date"
+							aria-describedby="addon-wrapping">
+					</div>
+				</div>
+				<div class="col-md-6 mt-2">
+					<div class="input-group flex-nowrap">
+
+						<span class="input-group-text" id="addon-wrapping">Role</span> <input
+							type="text" name="role" class="form-control"
+							placeholder="Your role" aria-label="role"
+							aria-describedby="addon-wrapping">
+					</div>
+				</div>
+
+			</div>
+
+
+			<!--  weight  and height  -->
+			<div class="row row-cols-lg-auto g-1 mt-2">
+				<div class="col-md-6 mt-2">
+					<div class="input-group flex-nowrap">
+						<span class="input-group-text" id="addon-wrapping">Weight</span> <input
+							type="number" name="weight" class="form-control"
+							placeholder="weight" aria-label=" weight"
+							aria-describedby="addon-wrapping">
+					</div>
+				</div>
+				<div class="col-md-6 mt-2">
+					<div class="input-group flex-nowrap">
+
+						<span class="input-group-text" id="addon-wrapping">Height</span> <input
+							type="number" name="height" class="form-control"
+							placeholder="height" aria-label=" height"
+							aria-describedby="addon-wrapping">
+					</div>
+				</div>
+
+			</div>
+
+			<!--  weight  and height  -->
+			<div class="row row-cols-lg-auto g-1 mt-2">
+				<div class="col-md-4 mt-2">
+					<div class="input-group flex-nowrap">
+						<span class="input-group-text" id="addon-wrapping">diatery_orientation</span>
+						<input type="text" name="diatery_orientation" class="form-control"
+							placeholder="diatery_orientation"
+							aria-label=" diatery_orientation"
+							aria-describedby="addon-wrapping">
+					</div>
+				</div>
+				<div class="col-md-8 mt-2">
+					<div class="input-group flex-nowrap">
+
+						<span class="input-group-text" id="addon-wrapping">intensity</span>
+						<input type="number" name="intensity" class="form-control"
+							placeholder="intensity" aria-label=" intensity"
+							aria-describedby="addon-wrapping">
+					</div>
+				</div>
+			</div>
+
+			<div class="row row-cols-lg-auto g-1 mt-2">
+				<div class="col-md-6 mt-2">
+					<div class="input-group flex-nowrap">
+						<span class="input-group-text" id="addon-wrapping">goal</span> <input
+							type="text" name="goal" class="form-control" placeholder="goal"
+							aria-label=" goal" aria-describedby="addon-wrapping">
+					</div>
+				</div>
+				<div class="col-md-6 mt-2">
+					<div class="input-group flex-nowrap">
+
+						<span class="input-group-text" id="addon-wrapping">work_out_time</span>
+						<input type="time" name="work_out_time" class="form-control"
+							placeholder="work_out_time" aria-label=" work_out_time"
+							aria-describedby="addon-wrapping">
+					</div>
+
+				</div>
+			</div>
+			<!--  -->
+			<div class="row row-cols-lg-auto g-1 mt-2">
+				<div class="col-md-6 mt-2">
+					<div class="input-group flex-nowrap">
+						<span class="input-group-text" id="addon-wrapping">sleep_time</span>
+						<input type="time" name="sleep_time" class="form-control"
+							placeholder="sleep_time" aria-label=" sleep_time"
+							aria-describedby="addon-wrapping">
+					</div>
+				</div>
+				<div class="col-md-6 mt-2">
+					<div class="input-group flex-nowrap">
+
+						<span class="input-group-text" id="addon-wrapping">wake_up_time</span>
+						<input type="time" name="wake_up_time" class="form-control"
+							placeholder="wake_up_time" aria-label=" wake_up_time"
+							aria-describedby="addon-wrapping">
+					</div>
+				</div>
+
+			</div>
+
+
+			<!--  -->
+			<div class="row row-cols-lg-auto g-1 mt-2">
+
+				<div class="col-md-6 mt-2">
+					<div class="input-group flex-nowrap">
+
+						<span class="input-group-text" id="addon-wrapping">medical_condition</span>
+						<input type="text" name="medical_condition" class="form-control"
+							placeholder="medical_condition" aria-label=" medical_condition"
+							aria-describedby="addon-wrapping">
+					</div>
+				</div>
+				<div class="col-md-6 mt-2">
+					<div class="input-group flex-nowrap">
+						<span class="input-group-text" id="addon-wrapping">allergic_to</span>
+						<input type="text" name="allergic_to" class="form-control"
+							placeholder="allergic_to" aria-label=" allergic_to"
+							aria-describedby="addon-wrapping">
+					</div>
+				</div>
+
+
+			</div>
+
+
+			<!--  -->
+			<div class="row row-cols-lg-auto g-1 mt-2">
+				<div class="col-md-6 mt-2">
+					<div class="input-group flex-nowrap">
+
+						<span class="input-group-text" id="addon-wrapping">login_name</span>
+						<input type="text" name="login_name" class="form-control"
+							placeholder="login_name" aria-label=" login_name"
+							aria-describedby="addon-wrapping">
+					</div>
+				</div>
+				<div class="col-md-6 mt-2">
+					<div class="input-group flex-nowrap">
+						<span class="input-group-text" id="addon-wrapping">password</span>
+						<input type="password" name="password" class="form-control"
+							placeholder="password" aria-label=" password"
+							aria-describedby="addon-wrapping">
+					</div>
+				</div>
+
+			</div>
+			<div class="d-flex justify-content-center mt-4">
+				<input type="submit" class="btn btn-success" value="Save User" />
+			</div>
+
+		</form>
+
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org/">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<div th:fragment="nutritionPlanTable">
+
+		<div style="overflow-x: auto">
+			<table class="table mt-5">
+				<thead>
+					<tr>
+						<th scope="col">plan id</th>
+						<th scope="col">Name</th>
+						<th scope="col">created_at</th>
+						<th scope="col">updated_at</th>
+						<th scope="col">price</th>
+						<th scope="col">user_id</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr th:each="plan:${plans}">
+						<!-- <th scope="row" th:text="${user.user_id}"></th>  -->
+						<td th:text="${plan.id}"></td>
+						<td th:text="${plan.name}"></td>
+						<td th:text="${plan.created_at}"></td>
+						<td th:text="${plan.updated_at}"></td>
+						<td th:text="${plan.price}"></td>
+						<td th:text="${plan.user_id}"></td>
+
+					</tr>
+
+				</tbody>
+			</table>
+		</div>
+	</div>
+</body>
+</html>

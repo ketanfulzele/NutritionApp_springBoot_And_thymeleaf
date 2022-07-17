@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org/">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<div th:fragment="userTable">
+
+		<div style="overflow-x:auto">
+			<table class="table">
+				<thead>
+					<tr>
+						<th scope="col">User id </th> 
+						<th scope="col">Name</th>
+						<th scope="col">contact</th>
+						<th scope="col">gender</th>
+						<th scope="col">dob</th>
+						<th scope="col">role</th>
+						<th scope="col">weight</th>
+						<th scope="col">height</th>
+						<th scope="col">intensity</th>
+						<th scope="col">goal</th>
+						<th scope="col">workOutTime</th>
+						<th scope="col">wakeUpTime</th>
+						<th scope="col">sleepTime</th>
+
+
+					</tr>
+				</thead>
+				<tbody>
+					<tr th:each="user:${users}">
+						<td scope="row" th:text="${user.user_id}"></td>
+						<td th:text="${user.name}"></td>
+						<td th:text="${user.contact}"></td>
+						<td th:text="${user.gender}"></td>
+						<td th:text="${user.dob}"></td>
+						<td th:text="${user.role}"></td>
+						<td th:text="${user.weight}"></td>
+						<td th:text="${user.height}"></td>
+						<td th:text="${user.intensity}"></td>
+						<td th:text="${user.goal}"></td>
+						<td th:text="${user.work_out_time}"></td>
+						<td th:text="${user.wake_up_time}"></td>
+						<td th:text="${user.sleep_time}"></td>
+					</tr>
+
+				</tbody>
+			</table>
+		</div>
+	</div>
+</body>
+</html>

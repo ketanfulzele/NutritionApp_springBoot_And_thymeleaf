@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org/">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<div  th:fragment="nutritionPlanForm(formAction)">
+		<form th:action="${formAction}" method="post">
+
+			<!-- name and email fields -->
+			<div class="row row-cols-lg-auto g-1">
+				<div class="col-md-6 mt-2">
+					<div class="input-group flex-nowrap">
+
+						<span class="input-group-text" id="addon-wrapping">Name</span> <input
+							type="text" name="name" class="form-control" placeholder="name"
+							aria-label="name" aria-describedby="addon-wrapping">
+					</div>
+				</div>
+				<div class="col-md-6 mt-2">
+					<div class="input-group flex-nowrap">
+						<span class="input-group-text" id="addon-wrapping">price</span> <input
+							type="number" name="price" class="form-control"
+							placeholder="Price " aria-label="price"
+							aria-describedby="addon-wrapping">
+					</div>
+				</div>
+
+			</div>
+			<!--  contact and gender  -->
+			<div class="row row-cols-lg-auto g-1 mt-2">
+				<div class="col-md-6 mt-2">
+					<div class="input-group flex-nowrap">
+						<div class="input-group flex-nowrap">
+							<span class="input-group-text" id="addon-wrapping">created_at</span>
+							<input type="date" name="created_at" class="form-control"
+								placeholder=" created_at" aria-label="created_at"
+								aria-describedby="addon-wrapping">
+						</div>
+
+					</div>
+				</div>
+				<div class="col-md-6 mt-2">
+					<div class="input-group flex-nowrap">
+						<span class="input-group-text" id="addon-wrapping">updated_at</span>
+						<input type="date" name="updated_at" class="form-control"
+							placeholder="updated_at" aria-label="updated_at"
+							aria-describedby="addon-wrapping">
+					</div>
+				</div>
+
+
+			</div>
+
+			<div class="row row-cols-lg-auto g-1 mt-2">
+				<div class="col mt-2">
+					<div class="input-group flex-nowrap">
+						<span class="input-group-text" id="addon-wrapping">user_id</span> <input
+							type="number" name="user_id" class="form-control"
+							placeholder="user_id" aria-label="user_id"
+							aria-describedby="addon-wrapping">
+					</div>
+				</div>
+				
+
+			</div>
+
+
+			<div class="d-flex justify-content-center mt-4">
+				<input type="submit" class="btn btn-success" value="Save Plan" />
+			</div>
+
+		</form>
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org/"
+	th:replace="includes/Base::layout(~{::section} , 'See All Plans Here')">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link
+	href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Nunito:wght@200&display=swap"
+	rel="stylesheet">
+
+<link rel="icon" href="images/fav.ico">
+<!-- that above link will display the icon on the tab  -->
+<link rel="stylesheet" href="lib/owl.carousel.min.css">
+<link rel="stylesheet" href="lib/owl.theme.default.min.css">
+<link rel="stylesheet" href="lib/css/bootstrap.min.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/feedback.css">
+<!-- for animation effect  -->
+<link rel="stylesheet" href="lib/animate.css">
+
+
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="0">
+	<section class="fluid-container" th:fragment="PlansTable">
+
+		<div th:insert="Tables/nutritionPlanTable::nutritionPlanTable"></div>
+	</section>
+	
+	<script src="lib/jquery-3.6.0.min.js"></script>
+	<script src="lib/js/bootstrap.min.js"></script>
+	<script src="lib/jquery.waypoints.js"></script>
+	<script src="lib/owl.carousel.min.js"></script>
+	<script src="lib/popper.min.js"></script>
+	<script src="lib/jquery.filterizr.min.js"></script>
+	<script src="https://kit.fontawesome.com/d0af5d7dda.js"
+		crossorigin="anonymous"></script>
+	<script src="js/app.js"></script>
+	<script src="lib/typed.js"></script>
+</body>
+</html>

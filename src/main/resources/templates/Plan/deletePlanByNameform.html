@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org/"
+	th:replace="includes/Base::layout(~{::section} , 'Delete Plan ')">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<section class="fluid-container mt-5">
+
+		<section class="container mt-5 mb-5">
+			<form action="deletePlanByName" method="post">
+
+				<!-- email fields -->
+				<div class="row row-cols-lg-auto g-1">
+					<div class="col-md-6 mt-2">
+						<div class="input-group flex-nowrap">
+							<span class="input-group-text" id="addon-wrapping">name</span> <input
+								type="text" name="name" class="form-control" placeholder="name"
+								aria-label="name" aria-describedby="addon-wrapping">
+						</div>
+					</div>
+
+				</div>
+				<div class="d-flex justify-content-center mt-4">
+					<input type="submit" class="btn btn-danger" value="Delete User" />
+				</div>
+
+			</form>
+		</section>
+
+
+
+		<div th:insert="Tables/nutritionPlanTable::nutritionPlanTable"></div>
+
+	</section>
+</body>
+</html>
